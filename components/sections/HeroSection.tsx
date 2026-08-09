@@ -8,16 +8,18 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+const basePath = process.env.NODE_ENV === 'production' ? '/Nexora-Technologies' : '';
+
 const HERO_IMAGES = [
-  "/hero-video/1-opening.png",
-  "/hero-video/2-idea.png",
-  "/hero-video/3-design.png",
-  "/hero-video/4-development.png",
-  "/hero-video/5-testing.png",
-  "/hero-video/6-deployment.png",
-  "/hero-video/7-cloud.png",
-  "/hero-video/8-live.png",
-  "/hero-video/9-ending.png",
+  `${basePath}/hero-video/1-opening.png`,
+  `${basePath}/hero-video/2-idea.png`,
+  `${basePath}/hero-video/3-design.png`,
+  `${basePath}/hero-video/4-development.png`,
+  `${basePath}/hero-video/5-testing.png`,
+  `${basePath}/hero-video/6-deployment.png`,
+  `${basePath}/hero-video/7-cloud.png`,
+  `${basePath}/hero-video/8-live.png`,
+  `${basePath}/hero-video/9-ending.png`,
 ];
 
 export function HeroSection() {
