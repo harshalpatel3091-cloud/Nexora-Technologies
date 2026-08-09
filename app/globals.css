@@ -1,0 +1,155 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-poppins);
+  --font-heading: var(--font-poppins);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+
+  /* Tech Mahindra Brand colors */
+  --color-brand-blue: #E31837;
+  /* Mahindra Red */
+  --color-brand-cyan: #B01227;
+  /* Darker Red for gradients */
+  --color-brand-green: #4A453D;
+  /* Anchor Grey 1 */
+  --color-brand-purple: #4D4D4F;
+  /* Steel Grey */
+  --color-brand-gray: #E5DFD3;
+  /* Clarity Grey 2 */
+  --color-brand-pink: #E31837;
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #29251D;
+  --card: #FFFFFF;
+  --card-foreground: #29251D;
+  --popover: #FFFFFF;
+  --popover-foreground: #29251D;
+  --primary: #E31837;
+  --primary-foreground: #FFFFFF;
+  --secondary: #E5DFD3;
+  --secondary-foreground: #29251D;
+  --muted: #F6F2EA;
+  --muted-foreground: #4D4D4F;
+  --accent: #F6F2EA;
+  --accent-foreground: #29251D;
+  --destructive: #E31837;
+  --border: #E5DFD3;
+  --input: #E5DFD3;
+  --ring: #E31837;
+
+  --chart-1: #E31837;
+  --chart-2: #4A453D;
+  --chart-3: #4D4D4F;
+  --chart-4: #29251D;
+  --chart-5: #E5DFD3;
+
+  --radius: 0.5rem;
+  /* Slightly sharper corners for enterprise look */
+
+  --sidebar: #F6F2EA;
+  --sidebar-foreground: #29251D;
+  --sidebar-primary: #E31837;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #E5DFD3;
+  --sidebar-accent-foreground: #29251D;
+  --sidebar-border: #E5DFD3;
+  --sidebar-ring: #E31837;
+}
+
+.dark {
+  --background: #050505;
+  --foreground: #F6F2EA;
+  --card: #29251D;
+  --card-foreground: #F6F2EA;
+  --popover: #29251D;
+  --popover-foreground: #F6F2EA;
+  --primary: #E31837;
+  --primary-foreground: #FFFFFF;
+  --secondary: #4D4D4F;
+  --secondary-foreground: #F6F2EA;
+  --muted: #4A453D;
+  --muted-foreground: #E5DFD3;
+  --accent: #4A453D;
+  --accent-foreground: #F6F2EA;
+  --destructive: #E31837;
+  --border: #4D4D4F;
+  --input: #4D4D4F;
+  --ring: #E31837;
+  --chart-1: #E31837;
+  --chart-2: #F6F2EA;
+  --chart-3: #E5DFD3;
+  --chart-4: #FFFFFF;
+  --chart-5: #4D4D4F;
+  --radius: 0.5rem;
+  --sidebar: #050505;
+  --sidebar-foreground: #F6F2EA;
+  --sidebar-primary: #E31837;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #4A453D;
+  --sidebar-accent-foreground: #F6F2EA;
+  --sidebar-border: #4D4D4F;
+  --sidebar-ring: #E31837;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading tracking-tight;
+  }
+}
