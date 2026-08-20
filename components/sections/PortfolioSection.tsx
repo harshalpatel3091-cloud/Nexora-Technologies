@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { slideInLeft, slideInRight, fadeUp, viewportConfig } from "@/lib/animations";
-import { ExternalLink, Code } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 const categories = ["All", "Business", "E-commerce", "AI", "Dashboard", "Automation"];
 
@@ -136,12 +137,9 @@ export function PortfolioSection() {
                   
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-background/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                    <a href="#" className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition-transform">
+                    <Link href={`/contact?project=${encodeURIComponent(project.title)}`} className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition-transform" title="Inquire about this project">
                       <ExternalLink className="w-5 h-5" />
-                    </a>
-                    <a href="#" className="w-12 h-12 rounded-full bg-muted text-muted-foreground flex items-center justify-center hover:scale-110 hover:bg-accent hover:text-accent-foreground transition-all">
-                      <Code className="w-5 h-5" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
 

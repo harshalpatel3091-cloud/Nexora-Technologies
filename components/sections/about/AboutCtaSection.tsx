@@ -28,7 +28,7 @@ export function AboutCtaSection() {
               Ready to Transform Your Digital Presence?
             </h2>
             <p className="text-lg md:text-xl text-brand-gray/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Let's combine our expertise with your vision to build something extraordinary. Partner with Nexora Technologies today.
+              Let&apos;s combine our expertise with your vision to build something extraordinary. Partner with Nexora Technologies today.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
