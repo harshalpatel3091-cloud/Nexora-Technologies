@@ -28,7 +28,7 @@ export function ProcessSection() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">
-            Our Proven <span className="text-brand-purple">Process</span>
+            Our Proven <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">Process</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             A systematic approach to ensure your project is delivered on time, within budget, and to the highest standards.
@@ -60,14 +60,14 @@ export function ProcessSection() {
                 variants={fadeUp}
                 className="flex flex-row md:flex-col items-center md:text-center gap-4 group"
               >
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-card border-2 border-border flex items-center justify-center text-muted-foreground group-hover:border-brand-purple group-hover:text-brand-purple group-hover:shadow-[0_0_20px_rgba(139,92,246,0.3)] group-hover:-translate-y-2 transition-all duration-300 relative z-10">
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-card border-2 border-border flex items-center justify-center text-muted-foreground group-hover:border-brand-blue group-hover:text-brand-blue group-hover:shadow-[0_0_24px_rgba(227,24,55,0.4)] group-hover:-translate-y-2 transition-all duration-300 relative z-10 shadow-sm">
                   {step.icon}
-                  <div className="absolute -bottom-2 -right-2 md:bottom-auto md:right-auto md:-top-3 md:-right-3 w-6 h-6 rounded-full bg-brand-purple text-white text-xs font-bold flex items-center justify-center">
+                  <div className="absolute -bottom-2 -right-2 md:bottom-auto md:right-auto md:-top-3 md:-right-3 w-6 h-6 rounded-full bg-brand-blue text-white text-xs font-bold flex items-center justify-center shadow-[0_0_12px_rgba(227,24,55,0.5)]">
                     {index + 1}
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-foreground font-bold mb-1 group-hover:text-brand-purple transition-colors">{step.title}</h4>
+                  <h4 className="text-foreground font-bold mb-1 group-hover:text-brand-blue transition-colors">{step.title}</h4>
                   <p className="text-xs text-muted-foreground hidden md:block">{step.desc}</p>
                 </div>
               </motion.div>

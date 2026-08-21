@@ -84,7 +84,8 @@ export function WhyUsSection() {
                 <motion.div 
                   key={index}
                   variants={fadeUp}
-                  className="flex flex-col gap-3 p-4 rounded-2xl border border-border bg-muted hover:bg-accent transition-colors"
+                  whileHover={{ y: -4, boxShadow: "0 0 20px -5px rgba(227,24,55,0.2)" }}
+                  className="flex flex-col gap-3 p-4 rounded-2xl glass-card hover:border-brand-blue/30 transition-all duration-300 cursor-default"
                 >
                   <div className={`w-12 h-12 rounded-full ${value.bg} flex items-center justify-center ${value.color}`}>
                     <value.icon className="w-6 h-6" />

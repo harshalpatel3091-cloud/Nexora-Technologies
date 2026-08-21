@@ -79,7 +79,7 @@ export function ContactSection() {
   };
 
   return (
-    <section className="py-24 bg-card/10 relative overflow-hidden">
+    <section id="contact" className="py-24 bg-card/10 relative overflow-hidden">
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-background to-transparent -z-10" />
 
       <div className="container mx-auto px-4 md:px-6">

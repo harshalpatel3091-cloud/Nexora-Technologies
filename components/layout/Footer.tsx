@@ -53,7 +53,7 @@ export function Footer() {
           <motion.div variants={fadeUp}>
             <h3 className="font-heading font-semibold text-lg text-foreground mb-6">Quick Links</h3>
             <ul className="space-y-4">
-              {['Home', 'About Us', 'Services', 'Portfolio', 'Packages', 'Blog', 'Contact'].map((link) => (
+              {['Home', 'About Us', 'Services', 'Portfolio', 'Packages', 'Contact'].map((link) => (
                 <li key={link}>
                   <Link href={`/${link === 'Home' ? '' : link.toLowerCase().replace(' ', '-')}`} className="text-muted-foreground hover:text-brand-cyan transition-colors text-sm">
                     {link}

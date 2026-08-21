@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
+import { glassCardReveal, fastStagger, fadeUp, viewportConfig } from "@/lib/animations";
 import { Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
 import { pricingPlans } from "@/constants/pricing";
 
@@ -32,7 +33,7 @@ export function PricingSection() {
         </motion.div>
 
         <motion.div 
-          variants={staggerContainer}
+          variants={fastStagger}
           initial="hidden"
           whileInView="show"
           viewport={viewportConfig}
@@ -41,12 +42,13 @@ export function PricingSection() {
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={index}
-              variants={fadeUp}
-              whileHover={{ y: -10 }}
-              className={`relative rounded-3xl p-8 border ${
+              variants={glassCardReveal}
+              whileHover={{ y: -8 }}
+              transition={{ duration: 0.2 }}
+              className={`relative rounded-3xl p-8 ${
                 plan.popular 
-                  ? "border-brand-blue bg-card shadow-[0_0_30px_-5px_rgba(227,24,55,0.3)]"
-                  : "border-border bg-card/50 hover:border-brand-blue/50"
+                  ? "glass-card-glow"
+                  : "glass-card hover:border-brand-blue/30"
               } transition-all duration-300 flex flex-col h-full`}
             >
               {plan.popular && (
@@ -73,15 +75,16 @@ export function PricingSection() {
                 ))}
               </ul>
 
-              <Button 
-                className={`w-full h-12 rounded-full font-semibold transition-all ${
+              <Link
+                href="/contact"
+                className={`w-full h-12 rounded-full font-semibold transition-all inline-flex items-center justify-center ${
                   plan.popular 
                     ? "bg-gradient-to-r from-brand-blue to-brand-cyan hover:opacity-90 text-white" 
                     : "bg-muted hover:bg-accent text-foreground"
                 }`}
               >
                 Get Started
-              </Button>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

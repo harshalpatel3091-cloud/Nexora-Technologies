@@ -7,7 +7,6 @@ const TechStackSection = dynamic(() => import("@/components/sections/TechStackSe
 const ProcessSection = dynamic(() => import("@/components/sections/ProcessSection").then(mod => mod.ProcessSection));
 const PortfolioSection = dynamic(() => import("@/components/sections/PortfolioSection").then(mod => mod.PortfolioSection));
 const PricingSection = dynamic(() => import("@/components/sections/PricingSection").then(mod => mod.PricingSection));
-const TestimonialsSection = dynamic(() => import("@/components/sections/TestimonialsSection").then(mod => mod.TestimonialsSection));
 const ContactSection = dynamic(() => import("@/components/sections/ContactSection").then(mod => mod.ContactSection));
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
       <ProcessSection />
       <PortfolioSection />
       <PricingSection />
-      <TestimonialsSection />
       <ContactSection />
     </>
   );
